@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>FABLAB Machines</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/styles.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="/">FAB LAB RIT</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="#">Services</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'gallery' %}">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'programs' %}">Programs</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'about' %}">About</a></li>
+          <li class="dropdown"><a href="#"><span>More</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'inventory' %}">Inventory</a></li>
+              <li><a href="{% url 'projects' %}">Projects</a></li>
+              
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li>Machines</li>
+        </ol>
+        <h1>Machines</h1>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="machines">
+      <div class="section-title">
+        <span>Machines</span>
+        <h2>Machines</h2>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7" data-aos="fade-right">
+            <a href=""><h2>Ultimaker<sup>2+</sup> 3D Printer</h2></a>
+            <p class="Arial">Description: The Zund is an accurate high-speed gantry with a variety of available tools
+              for cutting, plotting, creasing, scoring, milling, drawing, etc. A range of modules provide the capability
+              to cut, score, crease and mill. Use cases include origami/kirigami for rapid cutting-and-folding of
+              structures with tunable properties, two sided milling for press fit furniture and cutting of carbon fibre
+              fabric for composite layups.
+
+              <br><br>Working Area: 1800 mm x 2500 mm</br>
+
+              <br>Module Slots: 3 Nos( 1 Power Module, 2 Speed module)</br>
+
+              <br>Tools: Universal Cutting tool, Kiss Cutting Tool, Elecric Oscillating Tool, Creasing Tool</br>
+
+              <br>Card Board, Vinyl, Paper, Fabric, Glass Fiber, Acrylic, Aluminium etc.</br>
+
+              <br>Applications: A range of modules provide the capability to cut, score, crease and mill. Use cases
+              include origami/kirigami for rapid cutting-and-folding of structures with tunable properties, two sided
+              milling for press fit furniture etc</br>
+            </p>
+          </div>
+          <div class="col-sm" data-aos="fade-left">
+            <img src="{% static 'assets/img/machines/machine1.jpg' %}" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+
+      <br><br></br></br>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7" data-aos="fade-right">
+            <h2>ShopBot CNC Router</h2>
+            <p class="Arial">Description: The Abrasive water jet cutter is unlike any conventional machine. It compose
+              of a high pressure water system, accelerating water through a precision nozzle at near sonic speeds. The
+              water carries with it an abrasive particle which chips away the material, thereby cutting it with
+              precision. The water jet is a dynamic tool that can cut complex shapes in a wide range of materials from
+              simple metals to complex composites. It plays an integral part in creating the structure for machines that
+              can be built in the lab. It can be used to cut parts like metal gears, sprockets, machine frame machine
+              parts etc.
+
+              <br><br>Cutting Envelope: 1400 mm x 1400 mm</br>
+
+              <br>Z Axis Travel: 200 mm</br>
+
+              <br>Table Size: 2000 x 1650 mm</br>
+
+              <br>Speed: 4572 mm/min</br>
+
+              <br>Linear Positional Accuracy: +/- 0.0254 mm</br>
+
+              <br>Repeatability: +/- 0.0254 mm</br>
+
+              <br>Applications: Cuts complex flat parts out of most materials including metal, Marble, Granite,
+              Aluminium, titanium, plastic, glass, ceramics and composites up to 6" thick directly</br>
+            </p>
+          </div>
+          <div class="col-sm" data-aos="fade-left">
+            <img src="{% static 'assets/img/machines/machine2.png' %}" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+
+      <br><br></br></br>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7" data-aos="fade-right">
+            <h2>Epilog Mini Laser Engraver and Cutter</h2>
+            <p class="Arial">
+
+              <br><br>Cutting Envelope: 1400 mm x 1400 mm</br>
+
+              <br>Z Axis Travel: 200 mm</br>
+
+              <br>Table Size: 2000 x 1650 mm</br>
+
+              <br>Speed: 4572 mm/min</br>
+
+              <br>Linear Positional Accuracy: +/- 0.0254 mm</br>
+
+              <br>Repeatability: +/- 0.0254 mm</br>
+
+              <br>Applications: Cuts complex flat parts out of most materials including metal, Marble, Granite,
+              Aluminium, titanium, plastic, glass, ceramics and composites up to 6" thick directly</br>
+            </p>
+          </div>
+          <div class="col-sm" data-aos="fade-left">
+            <img src="{% static 'assets/img/machines/machine3.jpg' %}" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+
+      <br><br></br></br>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7" data-aos="fade-right">
+            <h2>Econoline Abrassive Sand Blaster</h2>
+            <p class="Arial">
+
+              <br><br>Cutting Envelope: 1400 mm x 1400 mm</br>
+
+              <br>Z Axis Travel: 200 mm</br>
+
+              <br>Table Size: 2000 x 1650 mm</br>
+
+              <br>Speed: 4572 mm/min</br>
+
+              <br>Linear Positional Accuracy: +/- 0.0254 mm</br>
+
+              <br>Repeatability: +/- 0.0254 mm</br>
+
+              <br>Applications: Cuts complex flat parts out of most materials including metal, Marble, Granite,
+              Aluminium, titanium, plastic, glass, ceramics and composites up to 6" thick directly</br>
+            </p>
+          </div>
+          <div class="col-sm" data-aos="fade-left">
+            <img src="{% static 'assets/img/machines/machine4.jpg' %}" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+
+      <br><br></br></br>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-7" data-aos="fade-right">
+            <h2>Roland Vinyl Cutter</h2>
+            <p class="Arial">
+
+              <br><br>Cutting Envelope: 1400 mm x 1400 mm</br>
+
+              <br>Z Axis Travel: 200 mm</br>
+
+              <br>Table Size: 2000 x 1650 mm</br>
+
+              <br>Speed: 4572 mm/min</br>
+
+              <br>Linear Positional Accuracy: +/- 0.0254 mm</br>
+
+              <br>Repeatability: +/- 0.0254 mm</br>
+
+              <br>Applications: Cuts complex flat parts out of most materials including metal, Marble, Granite,
+              Aluminium, titanium, plastic, glass, ceramics and composites up to 6" thick directly</br>
+            </p>
+          </div>
+          <div class="col-sm" data-aos="fade-left">
+            <img src="{% static 'assets/img/machines/machine5.jpg' %}" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  {% include 'footer.html' %}
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main_static.js' %}"></script>
+
+</body>
+
+</html>

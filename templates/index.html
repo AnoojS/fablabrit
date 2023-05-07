@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>FAB LAB RIT</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl/owl.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS Files -->
+  <link href="{% static 'assets/css/styles.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/css/index.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="/">FAB LAB RIT</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#home">Home</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrolito" href="{% url 'machines' %}">Machines</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'gallery' %}">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'about' %}">About</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li class="dropdown"><a href="#"><span>More</span><i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'projects' %}">Projects</a></li>
+              <li><a href="{% url 'inventory' %}">Inventory</a></li>
+              <li><a href="{% url 'programs' %}">Programs</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Home Section ======= -->
+  {% for home in home %}
+  <div class="main-banner" style="background-image: url('{{ home.homepage.url }}')">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <div class="header-text">
+            <h1>Welcome to <em>FAB LAB RIT</em></h1>
+            <h2>Fabrication Laboratory (FabLab) is a technical prototyping platform where people can design and build
+              their own technology.</h2>
+            <div class="buttons">
+              <div class="big-border-button">
+                <a class="nav-link scrollto" href="#info">Explore FAB LAB</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  <!-- End Home -->
+
+  <section class="featured-items" id="featured-items">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-features owl-carousel" style="position: relative; z-index: 5;">
+            {% for gallery in gallery %}
+            <div class="item">
+              <div class="thumb">
+                <img src="{{gallery.image.url}}" class="img-fluid" alt="">
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>{{ gallery.title }}</h4>
+                    <span>{{ gallery.description }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+
+
+    <section id="info" class="info">
+      <div class="container">
+
+        <div class="row">
+          <div class="content">
+            <h2>What are Fab Labs?</h2><br>
+            <p class="Arial">
+              A Fabrication Laboratory (FabLab) is a technical prototyping platform where people can design and build
+              their own technology. They began as began as an outreach program from MIT‘s Center for Bits and Atoms
+              (CBA). Fab labs aim to provide stimulus for local entrepreneurship and serves as a platform for learning
+              and innovation.
+              Fab labs are designed in a way that people with minimal training can come and work on developing their own
+              technology for personal or commercial use. Fab Labs also becomes a medium for connecting to a global
+              community of learners, educators, technologists, researchers and innovators – essentially becoming a
+              self-sustaining global knowledge sharing network.
+              A Fab Lab consists of state-of-the-art digital fabrication tools such as 3D printers, laser cutters, CNC
+              routers, electronics workbench, PCB milling machine, vinyl cutter etc. Allowing anyone to express their
+              ideas through technology.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= key_partners Section ======= -->
+    <section id="key_partners" class="key_partners">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row d-flex align-items-center">
+
+          <div class="col-sm-4">
+            <a href="https://fablabkerala.in/" target="_blank"><img src="{% static 'assets/img/key_partners/flk.png' %}"
+                class="img-fluid" alt=""></a>
+          </div>
+
+          <div class="col-sm-4">
+            <a href="https://startupmission.kerala.gov.in/" target="_blank"><img
+                src="{% static 'assets/img/key_partners/ksm.png' %}" class="img-fluid" alt=""></a>
+          </div>
+
+          <div class="col-sm-4">
+            <img src="{% static 'assets/img/key_partners/iedc.png' %}" class="img-fluid" alt="">
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End key_partners Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Services</span>
+          <h2>Services</h2>
+          <p>We provide services in</p>
+        </div>
+
+        <div class="row">
+          {% for service in service %}
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="icon-box">
+              <a href="#">
+                <img src="{{service.image.url}}" class="img-fluid" alt="">
+                <br></br>
+                <h4>{{ service.title }}</h4>
+                <p>{{ service.description }}</p>
+              </a>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Team</span>
+          <h2>Team</h2>
+          <p>Our Team</p>
+        </div>
+
+        <div class="row">
+          {% for team in team %}
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in">
+            <div class="member">
+              <img src="{{team.image.url}}" alt="">
+              <h4>{{ team.name }}</h4>
+              <span>{{ team.role }}</span>
+              <div class="social">
+                <a href="{{ team.phone }}" target="_blank"><i class="bi bi-telephone-fill"></i></a>
+                <a href="{{ team.mail }}" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+                <a href="{{ team.whatsapp }}" target="_blank"><i class="bi bi-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <span>Contact</span>
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>Rajiv Gandhi Institute of Technology,Nedumkuzhy,Velloor P.O.,Kottayam,Kerala</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>fablab@rit.ac.in</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>+91 9446332031</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row" data-aos="fade-up">
+
+          <div class="col-lg-6 ">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.1907938807117!2d76.62069921470817!3d9.578815993140706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b062d96b2fe8ed9%3A0xbade243e087b408!2sRajiv%20Gandhi%20Institute%20Of%20Technology!5e0!3m2!1sen!2sin!4v1655905635271!5m2!1sen!2sin"
+              width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  {% include 'footer.html' %}
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/vendor/popup/popup.js' %}"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main_static.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+</body>
+
+</html>

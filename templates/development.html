@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Developed By</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'assets/css/styles.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo"><a href="/">FAB LAB RIT</a></h1>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="/">Home</a></li>
+                    <li><a class="nav-link scrollto" href="#">Services</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'machines' %}">Machines</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'gallery' %}">Gallery</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'about' %}">About</a></li>
+                    <li class="dropdown"><a href="#"><span>More</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="{% url 'projects' %}">Programs</a></li>
+                            <li><a href="{% url 'inventory' %}">Inventory</a></li>
+                            <li><a href="{% url 'programs' %}">Programs</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li>Developed By</li>
+                </ol>
+                <h1>Developed By</h1>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+        <section>
+            <div class="section-title">
+                <span>Developed By</span>
+                <h2>Developed By</h2>
+            </div>
+        </section>
+
+        <div class="development container">
+            <div class="row">
+                <div class="development-img col-md-4">
+                    <img src="{% static 'assets/img/development/MUHAMMED FAIZAL S.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="development-description col-md">
+                    <a href=""><h1>Muhammed Faizal S</h1></a>
+                    <h3>UX Designer</h3>
+                    <p class="Arial">Mechanical Engineer,passionate in innovation and enterepreneurship and can apply managerial and design thinking skills along with technological expertise to solve the real world problems.
+                    </p>
+                    <ul>
+                        <li><a href="https://wa.me/+918590805908" target="_blank"><i class="bi bi-whatsapp"></i>&nbsp;+91 8590805908</li></a>
+                        <li><a href="mailto:faizal5c786@gmail.com" target="_blank"><i class="bx bx-envelope"></i>&nbsp;faizal5c786@gmail.com</li></a>
+                        <li><a href="https://www.linkedin.com/in/muhammed-faizal-s" target="_blank"><i class="bi bi-linkedin"></i>&nbsp;muhammed-faizal-s</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="development container">
+            <div class="row">
+                <div class="development-img col-md-4">
+                    <img src="{% static 'assets/img/development/Anooj.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="development-description col-md">
+                    <a href=""><h1>Anooj S</h1></a>
+                    <h3>Web Developer</h3>
+                    <p class="Arial">Computer Science Engineer, passionate in building new technology applications and can
+                        apply amassed knowledge on real world applications
+                        which demand versatility and growing as a professional.A competent software engineer who
+                        meets industry standards.</p>
+                    <ul>
+                        <li><a href="https://wa.me/+919400730298" target="_blank"><i class="bi bi-whatsapp"></i>&nbsp;+91 9400730298</li></a>
+                        <li><a href="mailto:anooj10000@gmail.com" target="_blank"><i class="bx bx-envelope"></i>&nbsp;anooj10000@gmail.com</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    {% include 'footer.html' %}
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'assets/js/main_static.js' %}"></script>
+
+</body>
+
+</html>
